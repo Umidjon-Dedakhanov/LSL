@@ -1,0 +1,204 @@
+.footer_body {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 450px;
+    flex-direction: column;
+    background: #021934;
+    padding-bottom: 30px;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #021934;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .footer_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+footer .footer_container .sec {
+    margin-right: 30px;
+}
+
+footer .footer_container .sec.aboutus {
+    width: 40%;
+}
+
+footer .footer_container h2 {
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+footer .footer_container h2::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #f72585
+}
+
+footer .footer_container .sec.aboutus p {
+    color: #fff;
+}
+
+.sci {
+    margin-top: 20px;
+    display: flex;
+
+}
+
+.sci li {
+    list-style: none;
+    width: 45px;
+    height: 45px;
+    background: #021934;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.sci li:hover {
+    background: #f72585;
+    /* color: #fff; */
+}
+
+.sci li:hover .FaFacebookF,
+.sci li:hover .AiOutlineTwitter,
+.sci li:hover .BsInstagram,
+.sci li:hover .BsTelegram,
+.sci li:hover .BsYoutube {
+    color: #fff;
+}
+
+.FaFacebookF,
+.AiOutlineTwitter,
+.BsInstagram,
+.BsTelegram,
+.BsYoutube {
+    color: #fff;
+    font-size: 22px;
+}
+
+.quickLinks {
+    position: relative;
+    width: 25%;
+}
+
+.quickLinks ul li {
+    list-style: none;
+}
+
+.quickLinks ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.quickLinks ul li a:hover {
+    color: #fff;
+}
+
+.contact {
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+}
+
+.contact .info {
+    position: relative;
+
+}
+
+.contact .info li {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.contact .info li span:nth-child(1) {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.contact .info li span {
+    color: #fff;
+}
+
+.contact .info li a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.contact .info li a:hover {
+    color: #fff;
+}
+
+.copyrightText {
+    width: 100%;
+    background: #021939;
+    padding: 8px 100px;
+    text-align: center;
+    color: #fff;
+}
+
+@media (max-width: 991px) {
+    footer {
+        padding: 40px;
+    }
+
+    footer .footer_container {
+        flex-direction: column;
+    }
+
+    footer .footer_container .sec {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+
+    footer .footer_container .sec.aboutus,
+    .quickLinks,
+    .contact {
+        width: 100%;
+    }
+
+    .copyrightText {
+        padding: 8px 40px;
+    }
+}

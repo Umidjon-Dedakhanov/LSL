@@ -1,0 +1,21 @@
+
+.resolve{
+    width: 80%;
+    margin: auto;
+}
+
+.answer_container{
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+}
+
+.btn_sendAnswers{
+    margin: auto;
+    margin-top: 60px;
+    display: block;
+    margin-bottom: 40px;
+}
+
+
+
+

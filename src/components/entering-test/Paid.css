@@ -1,0 +1,33 @@
+
+.unpaid_user,
+.paid_user{
+    width: 100%;    
+    min-height: 100vh;
+    background-color: #fff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.paid_userEntering{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.unpaid_user{
+    text-align: center;
+    padding-top: 20vh;
+}
+.unpaid_user p{
+    padding: 30px 0;
+}
+.unpaid_userTitle{
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.loading_text{
+    color: #000;
+    font-size: 30px;
+}

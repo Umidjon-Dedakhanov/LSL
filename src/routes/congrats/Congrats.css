@@ -1,0 +1,45 @@
+.congrats{
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.congrats > h1{
+  font-size: 130px;
+  color: blueviolet;
+}
+
+.congrats > h2{
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+.congrats > h2 a{
+  text-decoration: none;
+  color: dodgerblue;
+}
+
+.congrats > p{
+  font-size: 30px;
+  margin-top: 20px;
+  color: green;
+}
+
+.congrats > canvas{
+  height: 100vh;
+}
+
+.congrats__link{
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: dodgerblue;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 30px;
+}

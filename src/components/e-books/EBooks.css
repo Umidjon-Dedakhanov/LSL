@@ -1,0 +1,35 @@
+.main__ebooks{
+    margin: 100px auto;
+}
+
+.ebooks__title{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    color: #1C3554;
+}
+
+.ebooks__container{
+    width: 100%;
+    height: 600px;
+    margin: 50px 0px;
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+}
+
+.ebook{
+    width: 300px;
+    min-width: 300px;
+    height: 450px;
+    margin: 0 20px;
+    padding: 10px;
+    background-color: #fff;
+    filter: drop-shadow(40px 40px 57px rgba(0, 0, 0, 0.1));
+}
+
+.ebook__image{
+    width: 100%;
+    height: 250px;
+    background-color: #ccc;
+}

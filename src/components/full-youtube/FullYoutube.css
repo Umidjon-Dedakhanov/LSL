@@ -1,0 +1,44 @@
+
+.full_youtube{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.full_youtubeBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0007;
+}
+.full_youtubeBg div{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.full_youtubeContainer{
+    width: 80%;
+    height: 80%;
+    background: linear-gradient(45deg, #021934, #234368);
+    position: relative;
+    animation: fullYoutube .5s forwards;
+    opacity: 0;
+}
+@keyframes fullYoutube {
+    to{
+        opacity: 1;
+    }
+}
+.full_youtubeContainer iframe{
+    width: 100%;
+    height: 100%;
+}

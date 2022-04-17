@@ -1,0 +1,101 @@
+.main__start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff;
+    color: #000;
+}
+
+.start_vawe{
+  z-index: 20;
+  position: absolute;
+  cursor: pointer;
+}
+
+.start_text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  z-index: 15;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+
+.main_start_btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wave-card-shape {
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+  opacity: 0.1;
+  position: absolute;
+  border-radius: 75px;
+  background: linear-gradient(294deg, rgba(34,101,255,1) 0%, rgba(227,8,247,1) 100%);
+  -webkit-animation: rotate 15s linear infinite;
+          animation: rotate 15s linear infinite;
+}
+
+.wave-card-shape:nth-child(1) {
+  opacity: 0.2;
+  z-index: 2;
+  -webkit-animation: rotate 6s linear infinite;
+          animation: rotate 6s linear infinite;
+}
+
+.wave-card-shape:nth-child(2) {
+  opacity: 0.3;
+  z-index: 3;
+  width: 180px;
+  height: 180px;
+  -webkit-animation: rotate 16s linear infinite;
+          animation: rotate 16s linear infinite;
+}
+
+.wave-card-shape:nth-child(3) {
+  opacity: 0.5;
+  z-index: 3;
+  width: 160px;
+  height: 160px;
+  -webkit-animation: rotate 5s linear infinite;
+          animation: rotate 5s linear infinite;
+}
+
+.wave-card-shape:nth-child(4) {
+  opacity: 0.5;
+  z-index: 3;
+  width: 170px;
+  height: 170px;
+  -webkit-animation: rotate 9s linear infinite;
+          animation: rotate 9s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}

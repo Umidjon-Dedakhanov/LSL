@@ -1,0 +1,60 @@
+
+.create_blogs{
+    padding: 30px;
+    display: flex;
+}
+.create_blogsContainer{
+    width: 300px;
+}
+.create_blogsDelete{
+    width: calc(100% - 300px);
+    padding: 0 20px;
+    height: 90vh;
+    overflow: auto;
+}
+.create_blogsDeleteWrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.create_blogsTitle{
+    color: #F72585;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
+}
+.create_blogsLabel{
+    display: block;
+    color: #777;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.create_blogsInput{
+    width: 100%;
+    height: 40px;
+    text-indent: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.create_blogsSubmit{
+    display: block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    width: 100%;
+    height: 40px;
+    background: #F72585;
+    border-radius:5px;
+    border: 1px solid #F72585;
+    color: #fff;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.create_blogsSelect{
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    text-indent: 8px;
+}
+

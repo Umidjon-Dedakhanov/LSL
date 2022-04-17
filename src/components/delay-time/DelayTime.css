@@ -1,0 +1,50 @@
+.delay_time{
+    width: 100%;    
+    min-height: 100vh;
+    background-color: #fff;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.delay_time h2{
+    font-weight: 100;
+}
+.dec_time{
+    padding-top: 50px;
+    font-size: 4rem;
+    color: var( --py-pink);
+}
+
+.countdown{
+    text-align: center;
+}
+
+.countdown > p{
+    font-size: 130px;
+    font-weight: 900;
+    background: -webkit-linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+}
+
+.countdown > span{
+    color: #000;
+    font-size: 30px;
+}
+
+.show-counter{
+    display: flex;
+    align-items: center;
+}
+
+.show-counter > p{
+    padding: 0px 30px;
+    font-size: 100px;
+    padding-bottom: 30px;
+    background: -webkit-linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
