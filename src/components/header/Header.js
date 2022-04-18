@@ -10,8 +10,8 @@ const Header = ({setPopup}) => {
                 <div className="header__logo">
                    <img src={logo} alt="" />
                 </div>
-                <Link to="/admin" className="header__login">Login</Link>
-                <button className="header__signup" onClick={() => setPopup(true)}>Sign Up</button>
+                <Link to="/admin" className="header__login">Admin</Link>
+                <button className="header__signup" onClick={() => setPopup(true)}>Register</button>
             </div>
         </div>
     )

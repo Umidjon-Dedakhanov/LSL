@@ -1,5 +1,6 @@
 const initialState = {
-  userId: null
+  userId: null,
+  code: null
 }
 
 const authUserReducer = (state = initialState, action) => {
@@ -8,12 +9,14 @@ const authUserReducer = (state = initialState, action) => {
     case "AUTH_USER_SUCCESS" :
       localStorage.setItem("user", JSON.stringify(payload));
       return{
-        userId: payload.user._id
+        userId: payload.user._id,
+        code: 200
       }
     case "AUTH_USER_FAIL" :
         localStorage.removeItem("user");
         return{
-          userId: null
+          userId: null,
+          code: payload.code
         }
     default:
       return state

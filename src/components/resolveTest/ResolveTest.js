@@ -15,8 +15,6 @@ function ResolveTest() {
   const [answerData, setAnswerData] = useState([]);
   const [ansMatchData, setAnsMatchData] = useState([])
   const [result, setResult] = useState(0);
-  const [resultMatchData, setResultMatchData] = useState(0);
-  const [score, setScore] = useState(0);
   const user = useSelector(state => state.user);
   console.log(user)
   let token = localStorage.getItem("user-token-start");

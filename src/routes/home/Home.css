@@ -98,3 +98,10 @@
     background-color: rgb(49, 180, 60);
     text-align: center;
 }
+
+@media only screen and (max-width: 500px) {
+    .popup{
+        width: 90%;
+        height: auto;
+    }
+}

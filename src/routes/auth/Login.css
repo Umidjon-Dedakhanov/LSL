@@ -4,31 +4,35 @@
   align-items:center;
   padding-top: 100px;
 }
-.user_login h1{
+.title_user{
   color: var(--py-pink);
+  text-align: center;
 }
 .user_loginInput{
   display: block;
-  width: 280px;
+  width: 500px;
   height: 40px;
   margin-top: 20px;
   text-indent: 10px;
   border: 1px solid #9999;
   outline: none;
+  border-radius: 10px;
+  font-size: 18px;
 }
 
 .user_loginInput:focus{
-  box-shadow: 0px 0px 0px 4px #f7258457;
+  box-shadow: 0px 0px 0px 2px #062a7fe4;
 }
 
 .user_loginBtn{
-  width: 280px;
+  width: 500px;
   margin-top: 20px;
   padding: 15px 0px;
   background-color: var(--py-pink);
   font-size: 20px;
   color: #fff;
   border: none;
+  border-radius: 10px;
 }
 
 .user_loginBtn:focus{
@@ -41,4 +45,51 @@
 }
 .user_loginHome:hover{
   text-decoration: underline;
+}
+
+.error_title{
+  color: red;
+  margin:20px auto;
+}
+
+.instruction{
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.user_info{
+  
+  text-align: center;
+}
+
+.user_info > h2{
+  margin-top: 20px;
+  color: green;
+}
+
+.user_info > a{
+  color: dodgerblue;
+  text-decoration: none;
+}
+
+.validation{
+  margin: 0px 5%;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 570px){
+  .user_loginInput, .user_loginBtn{
+    width: 90%;
+    margin: 15px auto;
+  }
+
+  .user_loginBtn{
+    margin: 15px 5%;
+  }
+
+  .user_login > form{
+    width: 100%;
+  }
 }

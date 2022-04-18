@@ -2,7 +2,7 @@ import React from 'react';
 import './Banner.css';
 import { FiClock, FiUserCheck, FiVideo } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
-import bannerImage from '../../assets/j.jpeg';
+import bannerImage from '../../assets/ban.png';
 
 const Banner = () => {
     return (
@@ -18,7 +18,7 @@ const Banner = () => {
                     </form>
                 </div> */}
                 <Link to="/enteringtest" className=''>
-                 <button type="submit" className="intro__submit mb-3">TKT imtihonga kirish</button>
+                 <button type="submit" className="intro__submit mb-3">ENTER TKT TEST</button>
                 </Link>
                 <ul className="intro__sections">
                     <li className="section__item"> <FiClock/> Life Time Access</li>

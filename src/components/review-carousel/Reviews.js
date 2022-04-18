@@ -1,10 +1,23 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import './Reviews.css'
-import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
-import logoone from '../../assets/logos/partnerone.svg';
+import { Swiper, SwiperSlide } from "swiper/react";
+import logoone from '../../assets/logos/logo.jpg';
+import logotwo from '../../assets/logos/logo2.jpg';
+import logothree from '../../assets/logos/binary.svg';
+import logofour from '../../assets/logos/daily.jpg';
+import "swiper/swiper.min.css";
+import "swiper/components/effect-coverflow/effect-coverflow.min.css";
+import "swiper/components/pagination/pagination.min.css";
+import "swiper/components/navigation/navigation.min.css";
+import "./styles.css";
+import SwiperCore, {
+  EffectCoverflow,
+  Pagination,
+  Navigation,
+} from "swiper/core";
+SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
 
 const Reviews = () => {
-    const scrollPreview = useRef();
     const items = [
         {
             image: "https://coachingsquare.in/wp-content/uploads/2021/06/IELTS-Coaching-Coaching-Square.webp",
@@ -25,53 +38,45 @@ const Reviews = () => {
             situation: "Bachelor at Sejong University"
         }
     ]
-
-    const swipeLeft = () => {
-        scrollPreview.current.scrollBy({
-            left: -1200,
-            behavior: "smooth",
-        });
-    }
-
-    const swipeRight = () => {
-        scrollPreview.current.scrollBy({
-            left: 1200,
-            behavior: "smooth",
-        });
-    }
     return (
         <>
-        <div className="main__carousel">
-            <button className="review__arrows" onClick={swipeLeft}><FiChevronLeft/></button>
-                <div className="main__reviews" ref={scrollPreview}>
-                    {
-                        items?.map((review, index) => 
-                            <div key={index} className="review__item">
-                                <div className="review__image">
-                                    <img src={review?.image} alt="" />
-                                </div>
-                                <div className="review__content">
-                                    <h1>{review?.title}</h1>
-                                    <p>{review?.name}</p>
-                                    <span>{review?.situation}</span>
-                                </div>
-                            </div>
-                        )
-                    }
-                </div>
-            <button className="review__arrows" onClick={swipeRight}><FiChevronRight/></button>
-        </div>
+       <div className="video_wrapper">
+      <div className="container-w">
+        <Swiper
+          navigation={true}
+          effect={"coverflow"}
+          centeredSlides={true}
+          slidesPerView="auto"
+          loop={true}
+          coverflowEffect={{
+            rotate: 40,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          className="mySwiper"
+        >
+          {
+            items?.map((video, index, array) => 
+              <SwiperSlide key={index} className="image_slider_change">
+                <div className="review"></div>
+            </SwiperSlide>
+              )
+          }
+        </Swiper>
+      </div>
+    </div>
         <div className="partners">
             <h1 className="partners__title">Our Partners</h1>
             <div className="partners__collection">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/British_Council_logo.svg/1200px-British_Council_logo.svg.png" alt="" />
+                <img src="https://examseekers.files.wordpress.com/2018/05/tkt001b.png" alt="" />
+                <img src="https://radiantknowledgeservices.com/assets/images/camasses1.png" alt="" />
                 <img src={logoone} alt="" />
-                <img src={logoone} alt="" />
-                <img src={logoone} alt="" />
-                <img src={logoone} alt="" />
-                <img src={logoone} alt="" />
-                <img src={logoone} alt="" />
-                <img src={logoone} alt="" />
-                <img src={logoone} alt="" />
+                <img src={logotwo} alt="" />
+                <img src={logofour} alt="" />
+                <img src={logothree} alt="" />
             </div>
         </div>
        </>

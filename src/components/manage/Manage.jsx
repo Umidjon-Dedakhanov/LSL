@@ -13,14 +13,7 @@ const Manage = () => {
   
 
   const handleSetTime = () => {
-    axios.post("time",{startTime: `${start.date} ${start.time}`, endTime: `${end.date} ${end.time}`}, {
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization' : authHeaders(),
-        "Accept": "*/*",
-        "Access-Control-Allow-Origin" : "*"
-    }
-    })
+    axios.put("time", {startTime: `${start.date} ${start.time}`, endTime: `${end.date} ${end.time}`})
     .then(res => console.log(res))
     .catch(err => console.log(err))
   }

@@ -27,7 +27,7 @@ const AdminLogin = (props) => {
     <h1>Admin sign in</h1>
     <form onSubmit={handleAdminLogin}>
       <input className='user_loginInput' type="text" value={username} onChange={e => setUsername(e.target.value)}  placeholder="Username"/>
-      <input className='user_loginInput' type="text" value={password} onChange={e => setPassword(e.target.value)}  placeholder="Password"/>
+      <input className='user_loginInput' type="password" value={password} onChange={e => setPassword(e.target.value)}  placeholder="Password"/>
       <button className='user_loginBtn' type="submit">Login</button>
     </form>
     <Link to="/" className='user_loginHome'>

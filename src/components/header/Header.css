@@ -63,3 +63,29 @@
     color: #fff;
     border: none;
 }
+
+
+@media only screen and (max-width: 550px){
+    .header__login, .header__signup{
+        padding: 8px 15px;
+        font-size: 14px;
+        border-radius: 5px;
+        margin: 0px 5px;
+        text-decoration: none;
+    }
+
+    .header__logo > img{
+        width: 150px;
+    }
+}
+
+
+@media only screen and (max-width: 370px){
+    .header__login, .header__signup{
+        padding: 6px 10px;
+        font-size: 12px;
+        border-radius: 5px;
+        margin: 0px 5px;
+        text-decoration: none;
+    } 
+}

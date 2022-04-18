@@ -23,6 +23,7 @@
     padding: 15px 20px;
     font-size: 30px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin: 30px auto;
     border-radius: 10px;
@@ -44,4 +45,28 @@
 .tending_empty{
     color: #F72585;
     font-weight: 600;
+}
+
+@media only screen and (max-width: 1100px){
+    .trending__title{
+        font-size: 30px;
+    }
+
+    .trending__tabs{
+        font-size: 20px;
+        width: 90%;
+        justify-content: space-between;
+    
+    }
+}
+
+@media only screen and (max-width: 780px){
+   
+    .trending__tabs{
+        font-size: 18px;
+        width: 90%;
+        margin-top: 0px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
 }

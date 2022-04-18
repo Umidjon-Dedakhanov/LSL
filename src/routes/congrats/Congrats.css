@@ -1,5 +1,5 @@
 .congrats{
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: #fff;
   display: flex;
@@ -30,6 +30,7 @@
 }
 
 .congrats > canvas{
+  width: 100vw;
   height: 100vh;
 }
 
@@ -42,4 +43,28 @@
   border-radius: 10px;
   text-decoration: none;
   margin-top: 30px;
+}
+
+@media only screen and (max-width: 1000px) {
+      .congrats > h1{
+        font-size: 70px;
+      }
+}
+
+@media only screen and (max-width: 750px) {
+  .congrats > h2{
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .congrats > h1{
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .congrats > h2{
+    font-size: 15px;
+    text-align: center;
+  }
 }

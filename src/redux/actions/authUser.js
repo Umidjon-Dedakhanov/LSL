@@ -7,9 +7,12 @@ const authUserSuccess = (userData) => {
   }
 }
 
-const authUserFail = () => {
+const authUserFail = (code) => {
   return {
     type: "AUTH_USER_FAIL",
+    payload: {
+      code
+    }
   }
 }
 
@@ -17,7 +20,9 @@ const authUserFail = () => {
 const userLogin = (user__credentials) =>  async dispatch =>  {
   userLoginApi.post(USER_AUTH_ENDPOINT, user__credentials)
     .then(response => dispatch(authUserSuccess(response.data)))
-    .catch(err => dispatch(authUserFail()))
+    .catch(err => {
+      dispatch(authUserFail(err.response.status))
+    })
 }
 
 export default userLogin;
