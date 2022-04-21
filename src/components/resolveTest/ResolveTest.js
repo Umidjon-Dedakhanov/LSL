@@ -202,15 +202,15 @@ function ResolveTest() {
   }
 
   useEffect(() => {
-    // updateInstance.patch("/user/login/updatescore", {id: user.userId, score: result})
-    // .then(final => {
-    //   if(final.data.message > 0){
-    //     history.push("/congrats");
-    //     localStorage.clear();
-    //     window.location.reload();
-    //   }
-    // })
-    // .catch(err => console.log(err))
+    updateInstance.patch("/user/login/updatescore", {id: user.userId, score: result})
+    .then(final => {
+      if(final.data.message > 0){
+        history.push("/congrats");
+        localStorage.clear();
+        window.location.reload();
+      }
+    })
+    .catch(err => console.log(err))
   }, [result]);
 
   let questionCount = 0
