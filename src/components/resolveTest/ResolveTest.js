@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "../../api/create-test";
 import updateInstance from '../../api/userAuth';
+import axioss from 'axios'
 import { Redirect, useHistory, useLocation } from "react-router-dom";
 import "./ResolveTest.css";
 import AnswerSection from "../answerSection/AnswerSection";
@@ -175,32 +176,21 @@ function ResolveTest() {
     localStorage.setItem("ansMatchData", JSON.stringify(ansMatchData));
   }, [ansMatchData]);
 
-  const sendAnswer = () => {
-
-    axios
-      .post("resolvetest/multiple", answerData)
-      .then((res) => {
-        setResult(res.data)
-       
-      })
-      .catch(() => console.log("yoq"));
-
-      localStorage.removeItem("react-notes-answers")
-  };
-
   const sendAnsMatchData = () => {
 
-    axios
-      .post("resolvetest/matching", ansMatchData)
-      .then((res) => {
-        // setResult((score) => score + res.data);
-      })
-      .catch(() => {
-        console.log("yoq");
-      });
-      localStorage.removeItem("ansMatchData");
+    axioss.all([
+        axioss.post(`http://localhost:8000/resolvetest/matching`, 
+          ansMatchData
+        ), 
+        axioss.post(`http://localhost:8000/resolvetest/multiple`, 
+          answerData
+        )
+      ])
+      .then(axioss.spread((mat, mul) => {
+        setResult(mat.data + mul.data)
+      }));
   }
-
+  console.log(result)
   useEffect(() => {
     updateInstance.patch("/user/login/updatescore", {id: user.userId, score: result})
     .then(final => {
@@ -243,7 +233,7 @@ function ResolveTest() {
         className="btn_sendAnswers intro__submit"
         onClick={()=> {
         sendAnsMatchData();
-        sendAnswer();
+        // sendAnswer();
       }}>FINISH THE TEST</button>
       {/* <h1 style={{margin: "10px"}}>Your result { result || resultMatchData ? ` ${questionCount} / ${result + resultMatchData}` : ""} </h1> */}
     </div>): (
