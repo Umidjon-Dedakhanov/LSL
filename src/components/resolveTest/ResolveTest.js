@@ -179,10 +179,10 @@ function ResolveTest() {
   const sendAnsMatchData = () => {
 
     axioss.all([
-        axioss.post(`http://localhost:8000/resolvetest/matching`, 
+        axioss.post(`https://glacial-beyond-89151.herokuapp.com/resolvetest/matching`, 
           ansMatchData
         ), 
-        axioss.post(`http://localhost:8000/resolvetest/multiple`, 
+        axioss.post(`https://glacial-beyond-89151.herokuapp.com/resolvetest/multiple`, 
           answerData
         )
       ])
