@@ -190,7 +190,6 @@ function ResolveTest() {
         setResult(mat.data + mul.data)
       }));
   }
-  console.log(result)
   useEffect(() => {
     updateInstance.patch("/user/login/updatescore", {id: user.userId, score: result})
     .then(final => {
