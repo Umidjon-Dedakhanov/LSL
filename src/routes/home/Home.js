@@ -12,13 +12,13 @@ import { FiX } from 'react-icons/fi';
 import registration_services from '../../api/registration-services';
 
 const Home = () => {
-    const [popup, setPopup] = useState(true);
+    const [popup, setPopup] = useState(localStorage.getItem("popup"));
     const [registeredUser, setRegistredUser] = useState(null);
     const [success, setSuccess] = useState('');
     const [registration, setRegistration] = useState({firstname: "", lastname: "", password: "", phone: ""});
     const [error, setError] = useState('');
     useEffect(() => {
-        if(popup){
+        if(localStorage.getItem("popup") === "true"){
             document.body.style.overflow = "hidden"
         }
         else{
@@ -55,14 +55,20 @@ const Home = () => {
             .then(user => {
                 setRegistredUser(user.data)
                 setSuccess(user.data.message)
+                setTimeout(() => {
+                    setPopup("false");
+                    localStorage.setItem("popup", "false");
+                }, 3000)
             })
             .catch((err) => {
                 setError(err?.response.data.message)
                 console.log(err.response)
             })
         }
+        
     }
     console.log(registeredUser);
+
     return (
         <div className="main">
             <Header setPopup={setPopup}/>
@@ -79,11 +85,14 @@ const Home = () => {
                 <Footer/>
             </div>
             {
-                popup && 
+                popup === "true" && 
                 <>
                     <div className="fade"></div>
                     <div className="popup">
-                        <div className="controller" onClick={() => setPopup(false)}> <FiX /></div>
+                        <div className="controller" onClick={() =>{ 
+                            localStorage.setItem("popup", "false");
+                            setPopup("false")
+                        }}> <FiX /></div>
                         <h1 className="popup__title">Register for TKT Online Test</h1>
                       <form onSubmit={e => handleUserRegistration(e)}>
                           {

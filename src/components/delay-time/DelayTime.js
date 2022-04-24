@@ -10,8 +10,8 @@ function DelayTime({startTime}) {
   if (days + hours + minutes + seconds <= 0) {
     return <StartTest/>;
   } else {
-    localStorage.removeItem("user-token-start");
-    localStorage.removeItem("user")
+    // localStorage.removeItem("user-token-start");
+    // localStorage.removeItem("user")
     return (
       <div className="delay_time">
       <ShowCounter

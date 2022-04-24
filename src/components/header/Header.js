@@ -11,7 +11,12 @@ const Header = ({setPopup}) => {
                    <img src={logo} alt="" />
                 </div>
                 <Link to="/admin" className="header__login">Admin</Link>
-                <button className="header__signup" onClick={() => setPopup(true)}>Register</button>
+                <button className="header__signup" onClick={() => 
+               { 
+                   setPopup("true")
+                   localStorage.setItem("popup", "true")
+            }
+                }>Register</button>
             </div>
         </div>
     )

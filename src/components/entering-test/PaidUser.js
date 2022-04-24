@@ -40,6 +40,7 @@ function PaidUser() {
       })
       .catch(err => console.log(err))
   }
+  console.log(startTimeRes)
   return !user ?  <Redirect
         to={{
           pathname: "/user/login",

@@ -8,6 +8,7 @@ import AnswerSection from "../answerSection/AnswerSection";
 import Loader from "../Loader/NewLoader";
 import authHeaders from "../../utils/authHeader";
 import { useSelector } from "react-redux";
+import DelayBack from '../delay-time/DelayBack';
 
 function ResolveTest() {
   const history = useHistory();
@@ -18,6 +19,26 @@ function ResolveTest() {
   const [result, setResult] = useState(0);
   const user = useSelector(state => state.user);
   console.log(user)
+
+
+  const [loading, setLoading] = useState(false);
+  const [endTimeRes, setEndTimeRes] =useState('')
+  useEffect(() => {
+    function getTime() {
+      setLoading(true);
+     axios.get("time")
+     .then(res => {
+      setEndTimeRes(res.data[0])
+       setLoading(false);
+     })
+     .catch(err =>{ 
+       console.log(err )
+       setLoading(false);
+     })
+    }
+    return getTime()
+   }, [])
+
   let token = localStorage.getItem("user-token-start");
 
   useEffect(() => {
@@ -222,6 +243,7 @@ function ResolveTest() {
   }}
 /> : (
     <>
+        {!loading ? <DelayBack matchAns={ansMatchData} mulAns={answerData} endTime={endTimeRes?.endTime}/> : <p>Loading...</p>}
     {data.length ? (<div className="resolve">
       <div>
         {data?.map((question, inx) => (
