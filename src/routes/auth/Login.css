@@ -75,7 +75,8 @@
 }
 
 .validation{
-  margin: 0px 5%;
+  font-size: 25px;
+  color: red;
   margin-top: 10px;
 }
 

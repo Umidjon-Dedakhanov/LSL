@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Congrats.css';
 import Confetti from "react-confetti";
 import greet from "./greet.js";

@@ -58,8 +58,8 @@ const UserLogin = (props) => {
     <div className="user_info">
         <h2>You have already successfully Registered</h2>
         <h1 className="error_title">You need to proceed the PAYMENT!!!</h1>
-        <p className="instruction">Pay 30 000 sums by hand or plastic card!</p>
-        <a className="link" href="https://t.me/OtabekSadriddinov">Click here to pay the payment</a>
+        <p className="instruction">Pay 50 000 sums by hand or plastic card!</p>
+        <a className="link" href="https://t.me/onlinetktadmin">Click here to pay the payment</a>
     </div> 
   }
   <Link to="/" className='user_loginHome'>
