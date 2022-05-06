@@ -66,7 +66,8 @@ function AnswerSection({
   return (
     <div className="answer_container" key={question._id}>
       <div className="answer_containerTitle">
-        <span>{inx+1}. {question.question}</span>
+        <h2 style={{color: "darkblue"}}>{question?.question?.split(">")[0]}</h2>
+        <span>{inx+1}. {question?.question?.split(">").splice(1, question?.question?.split(">")?.length - 1).join(">")}</span>
       </div>
       <ul>
         {question.questionType === "Multiple Choice" &&
