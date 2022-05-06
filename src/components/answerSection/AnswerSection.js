@@ -61,7 +61,7 @@ function AnswerSection({
         question.answers.length,
         question.answers
       );
-    },100)
+    },100) 
   }
   return (
     <div className="answer_container" key={question._id}>
