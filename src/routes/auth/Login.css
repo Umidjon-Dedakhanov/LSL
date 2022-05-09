@@ -80,6 +80,20 @@
   margin-top: 10px;
 }
 
+.err{
+  animation: sh 0.2s 1 linear;
+  border: 2px solid red;
+  background-color: rgb(248, 216, 216);
+}
+
+@keyframes sh {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(8px) }
+  50% { transform: translateX(-8px) }
+  75% { transform: translateX(8px) }
+  100% { transform: translateX(0) }
+ }
+
 @media only screen and (max-width: 570px){
   .user_loginInput, .user_loginBtn{
     width: 90%;

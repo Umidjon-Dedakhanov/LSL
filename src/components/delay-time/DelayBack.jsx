@@ -43,13 +43,16 @@ function DelayTime({ endTime, mulAns, matchAns}) {
   }, [result]);
   if (days + hours + minutes + seconds <= 0) {
     sendAnsMatchData()
+    localStorage.removeItem("user-token-start");
+    localStorage.removeItem("user")
+    // here check
     return <Congrats/>;
   } else {
-    // localStorage.removeItem("user-token-start");
-    // localStorage.removeItem("user")
+    
     return (
       <div className="delay_time" style={hours < 1 && minutes < 5 ? {background: "#fbc6c6"} : {background: "#fff"}}>
       <ShowCounter
+        days={days}
         hours={hours}
         minutes={minutes}
         seconds={seconds}

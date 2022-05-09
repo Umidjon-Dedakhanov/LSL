@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect  } from 'react';
 import { Redirect, useLocation, Link } from 'react-router-dom';
 import { connect, useSelector } from 'react-redux';
 import userLogin from '../../redux/actions/authUser';
@@ -6,7 +6,7 @@ import './Login.css';
 
 const UserLogin = (props) => {
   const location = useLocation();
-  const [phone, setPhone] = useState('');
+  const [phone, setPhone] = useState('+998');
   const [password, setPassword] = useState('');
   const user = useSelector(state => state.user);
   console.log(user)
@@ -14,6 +14,11 @@ const UserLogin = (props) => {
     e.preventDefault();
     props.userLogin({phone, password});
   }
+
+  useEffect(() => {
+      user.code = ''
+  }, [user])
+
   return user.userId ? <Redirect
   to={{
     pathname: "/enteringtest/paiduser",
@@ -25,8 +30,8 @@ const UserLogin = (props) => {
     <div className='user_login'>
     <h1 className="title_user">Registered Phone Number and Password</h1>
   <form onSubmit={handleEnterTest}>
-      <input className='user_loginInput' type="text" placeholder="Telephone number" value={phone} onChange={e => setPhone(e.target.value)} />
-      <input className='user_loginInput' type="text" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)}/>
+      <input className={user?.code ? 'user_loginInput err' : 'user_loginInput'} type="text" placeholder="Telephone number" value={phone} onChange={e => setPhone(e.target.value)} />
+      <input className={user?.code ? 'user_loginInput err' : 'user_loginInput'} type="text" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)}/>
       { 
         user?.code === 400 &&
         <p className="validation">

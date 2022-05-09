@@ -15,7 +15,7 @@ const Home = () => {
     const [popup, setPopup] = useState(localStorage.getItem("popup"));
     const [registeredUser, setRegistredUser] = useState(null);
     const [success, setSuccess] = useState('');
-    const [registration, setRegistration] = useState({firstname: "", lastname: "", password: "", phone: ""});
+    const [registration, setRegistration] = useState({firstname: "", lastname: "", password: "", phone: "+998"});
     const [error, setError] = useState('');
     useEffect(() => {
         if(localStorage.getItem("popup") === "true"){
