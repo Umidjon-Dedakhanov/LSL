@@ -20,7 +20,7 @@ const Trending = () => {
             setData(data.data)
             setLoading(false)
         })
-          .catch(() => console.log("yoq"));
+          .catch(() => {});
       }, [filterType]);
     document.body.style.overflow = videoShow ? "hidden" : "auto"
     const tabs = ["All","Blogs", "IELTS", "TKT", "Grammar", "CEFR"]

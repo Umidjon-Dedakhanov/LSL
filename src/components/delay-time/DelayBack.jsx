@@ -12,7 +12,6 @@ function DelayTime({ endTime, mulAns, matchAns}) {
   const user = useSelector(state => state.user);
 
   const history = useHistory();
-  console.log(endTime)
   var countDownDate = new Date(endTime).getTime();
   const [days, hours, minutes, seconds] = useTimer(countDownDate);
   const [result, setResult] = useState(0);

@@ -26,7 +26,6 @@ function AnswerSection({
 
   // const total = 0;
   // let all = [...ansMatchData, ...answerData];
-  // console.log(all)
 
   useEffect(() => {
     answerData.forEach(({ aId }) => {

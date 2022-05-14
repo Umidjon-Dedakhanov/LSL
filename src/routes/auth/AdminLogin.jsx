@@ -9,7 +9,6 @@ const AdminLogin = (props) => {
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
   const admin = useSelector((state) => state.admin);
-  console.log(admin);
   const handleAdminLogin = (e) => {
     e.preventDefault();
     props.authorizeAdmin({username, password});

@@ -52,3 +52,41 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
+@media only screen and (max-width: 598px) {
+  .countdown > p{
+    font-size: 30px;
+  }
+
+  .show-counter > p{
+    font-size: 30px;
+    padding: 10px 30px;
+  }
+
+  .countdown > span{
+    color: #000;
+    font-size: 20px;
+  }
+}
+
+
+@media only screen and (max-width: 440px) {
+  .delay_time{
+    min-height: 100px;
+    background-color: red;
+  }
+  .countdown > p{
+    font-size: 20px;
+  }
+
+  .show-counter > p{
+    font-size: 20px;  
+    padding: 0px 30px;
+  }
+
+  .countdown > span{
+    color: #000;
+    font-size: 15px;
+  }
+}

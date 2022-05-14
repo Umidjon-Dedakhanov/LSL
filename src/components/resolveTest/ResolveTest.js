@@ -18,7 +18,6 @@ function ResolveTest() {
   const [ansMatchData, setAnsMatchData] = useState([])
   const [result, setResult] = useState(0);
   const user = useSelector(state => state.user);
-  console.log(user)
 
 
   const [loading, setLoading] = useState(false);
@@ -32,7 +31,6 @@ function ResolveTest() {
        setLoading(false);
      })
      .catch(err =>{ 
-       console.log(err )
        setLoading(false);
      })
     }
@@ -64,7 +62,7 @@ function ResolveTest() {
       }
     }
     catch(err){
-      console.log(err )
+      
     }
    
   }, [token, history]);

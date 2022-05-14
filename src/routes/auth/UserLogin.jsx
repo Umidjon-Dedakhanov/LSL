@@ -9,7 +9,6 @@ const UserLogin = (props) => {
   const [phone, setPhone] = useState('+998');
   const [password, setPassword] = useState('');
   const user = useSelector(state => state.user);
-  console.log(user)
   const handleEnterTest = (e) => {
     e.preventDefault();
     props.userLogin({phone, password});

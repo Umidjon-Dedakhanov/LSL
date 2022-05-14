@@ -15,7 +15,7 @@ const StartTest = () => {
           history.push("/resolvingtest")
         }
       })
-      .catch(err => console.log(err))
+      .catch(err => {})
   }
   return (
     <div className="main__start">

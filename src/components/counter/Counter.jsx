@@ -1,7 +1,6 @@
 import Timetodisplay from './Timetodisplay';
 
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
-  console.log(days)
   return (
     <div className="show-counter">
          <Timetodisplay value={days} type={'Days'} isDanger={false} />

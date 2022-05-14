@@ -2,14 +2,12 @@ import React from 'react'
 import "./EnteringTest.css"
 import {Switch, Route, Redirect, useLocation} from "react-router-dom"
 import PaidUser from '../../components/entering-test/PaidUser'
-import UnPaidUser from '../../components/entering-test/UnPaidUser'
 import { useSelector } from 'react-redux'
 
 function EnteringTest() {
   const location = useLocation();
   const token = localStorage.getItem("user-token-start");
   const user = useSelector(state => state.user)
-  console.log(user)
   return token ? <Redirect
       to={{
         pathname: "/resolvingtest",

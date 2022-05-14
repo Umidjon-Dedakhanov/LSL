@@ -19,7 +19,6 @@ function PaidUser() {
       setLoading(false);
     })
     .catch(err =>{ 
-      console.log(err )
       setLoading(false);
     })
    }
@@ -30,7 +29,6 @@ function PaidUser() {
   const userLoc = JSON.parse(localStorage.getItem("user"));
   const user = useSelector(state => state.user);
   const handleToken = () => {
-    console.log(userLoc?.user.userId)
     userLogin.post("user/login/start", {id: userLoc?.user.userId})
       .then(response => {
         if(response.data.token){
@@ -40,7 +38,6 @@ function PaidUser() {
       })
       .catch(err => console.log(err))
   }
-  console.log(startTimeRes)
   return !user ?  <Redirect
         to={{
           pathname: "/user/login",
