@@ -23,19 +23,22 @@ const Reviews = () => {
             image: "https://coachingsquare.in/wp-content/uploads/2021/06/IELTS-Coaching-Coaching-Square.webp",
             title: "After studying here I gained new knowledge and insights. The mentor was very friendly and guided me to get the knowledge I wanted. Thank you!",
             name: "John Doe",
-            situation: "Bachelor at Sejong University"
+            situation: "Bachelor at Sejong University",
+            comment: '"I have studied different courses so far but I could not find a center like LSL. This is a center that helped me to feel sense of international certificates in a short period of time through commitment and passion. Thanks for all supportive teachers!"'
         },
         {
             image: "https://coachingsquare.in/wp-content/uploads/2021/06/IELTS-Coaching-Coaching-Square.webp",
             title: "After studying here I gained new knowledge and insights. The mentor was very friendly and guided me to get the knowledge I wanted. Thank you!",
             name: "John Doe",
-            situation: "Bachelor at Sejong University"
+            situation: "Bachelor at Sejong University",
+            comment: '"Assalomu alaykum hurmatli ustoz Jaloliddin! Men Farg\'onadan Odina Gayupova sizni onlayn guruhlaringizda o\'qigandim. 7-mart kuni topshirgan Module 1 imtihonidan Band 3 oldim. Bugun natija chiqdi. Sizga katta rahmat bergan bilimlaringiz uchun! Ilohim bundanda bilimingiz ziyoda bo\'lsin!Ko\'plab talabgorlarni xursand qilishda davom eting! Ishlaringizga omad charchamang!"'
         },
         {
             image: "https://coachingsquare.in/wp-content/uploads/2021/06/IELTS-Coaching-Coaching-Square.webp",
             title: "After studying here I gained new knowledge and insights. The mentor was very friendly and guided me to get the knowledge I wanted. Thank you!",
             name: "John Doe",
-            situation: "Bachelor at Sejong University"
+            situation: "Bachelor at Sejong University",
+            comment: '"Assalomu alaykum! Jaloliddin bergan bilimlarizga rozi buling. Mehnatlariz natijasi o\'laroq 2-moduledanam 3-moduledanam utibman. Attestatsiyadan ham 87ball bilan oliy toifaga utdim. Sizga kattakon rahmat, kelgusidagi faoliyatizda ulkan zafarlar tilayman. Doimo sog\' va salomat bo\'ling🤲🤲🤲"'
         }
     ]
     return (
@@ -60,7 +63,9 @@ const Reviews = () => {
           {
             items?.map((video, index, array) => 
               <SwiperSlide key={index} className="image_slider_change">
-                <div className="review"></div>
+                <div className="review">
+                  <span>{video.comment}</span>
+                </div>
             </SwiperSlide>
               )
           }
